@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
   <title>TiwariPay - Loan Agreement (PDF)</title>
 
   <!-- Simple styling to make PDF look good -->
@@ -190,7 +191,6 @@
         <strong>Communication / Contact:</strong> For queries or support contact <a href="mailto:kumaramit8668@gmail.com">kumaramit8668@gmail.com</a>.<br>
         <strong>Governing Law:</strong> This Agreement will be governed by the applicable laws of India.
       </p>
-      <br>
     </div>
 
     <div class="section">
@@ -254,7 +254,7 @@
       }).catch((err) => {
         console.error("PDF generation failed:", err);
         btn.disabled = false;
-        btn.innerHTML = '<span class="icon-pdf">PDF</span> Download PDF';
+        btn.innerHTML = '<span class="icon-pdf"></span> Download PDF';
         alert('PDF generation failed in this browser. Please use the Download PDF button or try another browser.');
       });
     }

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TiwariPay - Loan Agreement (PDF)</title>
+
+  <!-- Simple styling to make PDF look good -->
+  <style>
+    :root{
+      --brand:#002f6c;
+      --muted:#666;
+      --paper-white: #fff;
+    }
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:#f2f6fa;
+      padding:24px;
+      -webkit-font-smoothing:antialiased;
+    }
+    .page {
+      width: 800px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: var(--paper-white);
+      padding: 36px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      color:#222;
+      box-sizing:border-box;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      border-bottom: 4px solid var(--brand);
+      padding-bottom:12px;
+      margin-bottom:20px;
+    }
+    .logo {
+      width:58px;
+      height:58px;
+      background:var(--brand);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      font-weight:700;
+      font-size:18px;
+    }
+    h1{ margin:0; font-size:20px; color:var(--brand); }
+    .meta { color:var(--muted); margin-top:6px; font-size:13px; }
+    .section { margin-top:18px; line-height:1.6; font-size:14px; }
+    .section h3{ margin:0 0 8px 0; font-size:15px; color:var(--brand); }
+    table.rate {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:10px;
+    }
+    table.rate th, table.rate td{
+      border:1px solid #dcdcdc;
+      padding:8px 10px;
+      text-align:center;
+      font-size:13px;
+    }
+    table.rate th{ background:var(--brand); color:#fff; font-weight:600; }
+    .note { font-size:13px; color:#111; background:#fff7e6; padding:10px; border-left:4px solid #ffd27a; margin-top:12px; }
+    footer { margin-top:26px; font-size:12px; color:var(--muted); text-align:center; }
+    .controls { display:flex; gap:12px; justify-content:center; margin-top:18px; }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--brand);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:6px;
+      text-decoration:none;
+      cursor:pointer;
+      border:none;
+      font-weight:600;
+    }
+    .btn:disabled{ opacity:0.6; cursor:default; }
+    .icon-pdf {
+      width:18px; height:18px; display:inline-block;
+      background:linear-gradient(180deg,#e53935,#b71c1c);
+      border-radius:3px;
+      color:#fff; font-size:12px; text-align:center; line-height:18px; font-weight:700;
+    }
+
+    /* Make PDF content print-friendly: larger margins for PDF */
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow:none; margin:0; width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="agreement">
+    <header>
+      <div class="logo">TP</div>
+      <div>
+        <h1>TiwariPay</h1>
+        <div class="meta">Loan Agreement — Duration: <strong>30 days</strong></div>
+      </div>
+    </header>
+
+    <div class="section">
+      <h3>1. Agreement Overview</h3>
+      <p>
+        This Loan Agreement (the "Agreement") is between <strong>TiwariPay</strong> (the "Lender") and the Borrower. By accepting
+        a loan from TiwariPay, the Borrower agrees to all terms stated herein. The loan duration is strictly <strong>30 days</strong>
+        from the date of disbursement unless otherwise agreed in writing.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>2. Interest Rates & Repayment Examples</h3>
+      <p>Interest is applied as follows based on the loan amount:</p>
+
+      <table class="rate" aria-label="Interest rates table">
+        <thead>
+          <tr>
+            <th>Loan Amount (₹)</th>
+            <th>Interest Rate</th>
+            <th>Total Repayment (₹)</th>
+            <th>EMI Breakdown (3 parts)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>500</td>
+            <td>30%</td>
+            <td>650</td>
+            <td>₹216 + ₹216 + ₹218 (due day 10, 20, 30)</td>
+          </tr>
+          <tr>
+            <td>1000</td>
+            <td>25%</td>
+            <td>1250</td>
+            <td>₹416 + ₹416 + ₹418 (due day 10, 20, 30)</td>
+          </tr>
+          <tr>
+            <td>1500</td>
+            <td>20%</td>
+            <td>1800</td>
+            <td>₹600 + ₹600 + ₹600 (due day 10, 20, 30)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:10px;">
+        <strong>Note:</strong> Borrowers may also repay the entire amount in a single payment anytime before the final due date.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>3. EMI Schedule</h3>
+      <p>
+        The EMI (if chosen) will be recovered in three parts:
+        <ul>
+          <li>1st part — within <strong>10 days</strong> of disbursement</li>
+          <li>2nd part — within <strong>20 days</strong> of disbursement</li>
+          <li>3rd part — within <strong>30 days</strong> of disbursement</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>4. Default & Legal Action</h3>
+      <p>
+        If the Borrower fails to repay the loan within the stipulated period, <strong>TiwariPay</strong> reserves the right to:
+        <ol>
+          <li>Initiate legal proceedings for recovery of the outstanding amount;</li>
+          <li>Report the default to credit information bureaus and other agencies;</li>
+          <li>Use any lawful remedies available including collection actions and recovery costs.</li>
+        </ol>
+      </p>
+
+      <div class="note">
+        <strong>Important:</strong> Non-repayment may affect your credit score and may lead to legal consequences as described above.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>5. General Terms</h3>
+      <p>
+        <strong>Loan Duration:</strong> 30 days only.<br>
+        <strong>Communication / Contact:</strong> For queries or support contact <a href="mailto:kumaramit8668@gmail.com">kumaramit8668@gmail.com</a>.<br>
+        <strong>Governing Law:</strong> This Agreement will be governed by the applicable laws of India.
+      </p>
+      <br>
+    </div>
+
+    <div class="section">
+      <h3>6. Acceptance</h3>
+      <p>
+        By accepting digitally or signing, the Borrower acknowledges reading, understanding, and accepting the terms of this Agreement.
+      </p>
+    </div>
+
+    <footer>
+      © <span id="year"></span> TiwariPay. All rights reserved.
+    </footer>
+  </div>
+
+  <div class="controls">
+    <button id="downloadBtn" class="btn">
+      <span class="icon-pdf">PDF</span>
+      Download PDF
+    </button>
+    <a id="openBtn" class="btn" href="#" onclick="openPrintable(); return false;">
+      Open Printable View
+    </a>
+  </div>
+
+  <!-- html2pdf library (bundle) from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script>
+    // Insert current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // PDF options (tweak if needed)
+    const pdfOptions = {
+      margin:       [10, 10, 10, 10], // top, left, bottom, right (mm)
+      filename:     'TiwariPay_Loan_Agreement.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2, useCORS: true },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Function to generate and save PDF
+    function generateAndSavePDF(autoCloseAfter=false) {
+      const element = document.getElementById('agreement');
+
+      // disable button while exporting
+      const btn = document.getElementById('downloadBtn');
+      btn.disabled = true;
+      btn.textContent = 'Preparing PDF...';
+
+      // generate pdf
+      html2pdf().set(pdfOptions).from(element).save().then(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="icon-pdf">PDF</span> Download PDF';
+        // optionally close the window if autoCloseAfter true
+        if (autoCloseAfter) {
+          // try to close - may not work in some browsers if not opened by script
+          setTimeout(() => {
+            try { window.close(); } catch(e) {}
+          }, 500);
+        }
+      }).catch((err) => {
+        console.error("PDF generation failed:", err);
+        btn.disabled = false;
+        btn.innerHTML = '<span class="icon-pdf">PDF</span> Download PDF';
+        alert('PDF generation failed in this browser. Please use the Download PDF button or try another browser.');
+      });
+    }
+
+    // Hook up button
+    document.getElementById('downloadBtn').addEventListener('click', function(){
+      generateAndSavePDF(false);
+    });
+
+    // Optional: open a print-friendly view in a new tab
+    function openPrintable(){
+      window.print();
+    }
+
+    // Auto-generate PDF when page opens if query param auto=true or if opened directly.
+    (function autoDownloadIfWanted(){
+      // Auto-trigger on load. Many browsers prompt/save automatically, but popup blockers may block auto window.close.
+      // We attempt auto-download once when page loads.
+      // To avoid surprising users, we do this automatically: you can remove auto trigger if you prefer manual only.
+      try {
+        // short delay to allow fonts & images to load
+        setTimeout(() => { generateAndSavePDF(true); }, 700);
+      } catch(e) {
+        console.warn("Auto PDF generation failed:", e);
+      }
+    })();
+  </script>
+</body>
+</html>

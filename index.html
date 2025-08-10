@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="https://github.com/tradewithamit/TiwariPay/blob/main/Tiwaripaylogo3.png?raw=true" type="image/x-icon">
 
@@ -13,24 +12,29 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: #f8f9fa;
+            background: #e0e5ec; /* Soft background */
+            color: #333;
         }
 
         header {
-            background-color: #002f6c;
-            color: white;
+            background: #e0e5ec;
+            color: #333;
             padding: 15px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            /* Neumorphism effect */
+            box-shadow:
+                8px 8px 15px #a3b1c6,
+                -8px -8px 15px #ffffff;
+            border-radius: 12px;
+            margin: 10px;
         }
 
         header img {
             height: 40px;
-            border-top-right-radius: 50%;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-
+            border-radius: 50%;
         }
 
         header h1 {
@@ -42,17 +46,24 @@
         .hero {
             text-align: center;
             padding: 40px 20px;
-            background-color: #e0ecf8;
+            border-radius: 20px;
+            background: #e0e5ec;
+
+            /* Neumorphism */
+            box-shadow:
+                inset 5px 5px 10px #a3b1c6,
+                inset -5px -5px 10px #ffffff;
+            margin: 20px;
         }
 
         .hero h2 {
-            font-size: 32px;
+            font-size: 28px;
             margin-bottom: 10px;
             color: #002f6c;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 16px;
             color: #333;
             margin-bottom: 30px;
         }
@@ -60,20 +71,24 @@
         .loan-options {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
-            padding: 30px 20px;
+            padding: 20px;
         }
 
         .loan-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #e0e5ec;
+            border-radius: 20px;
             padding: 25px;
             text-align: center;
             max-width: 280px;
             width: 100%;
             transition: transform 0.3s;
+
+            /* Neumorphism */
+            box-shadow:
+                8px 8px 15px #a3b1c6,
+                -8px -8px 15px #ffffff;
         }
 
         .loan-card:hover {
@@ -81,38 +96,49 @@
         }
 
         .loan-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 10px;
             color: #002f6c;
         }
 
         .loan-card p {
-            font-size: 16px;
+            font-size: 14px;
             color: #555;
             margin-bottom: 20px;
         }
 
         .apply-btn {
             padding: 12px 25px;
-            background-color: #002f6c;
+            background: orange;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 50px;
             cursor: pointer;
             font-size: 16px;
             text-decoration: none;
+            display: inline-block;
+            box-shadow:
+                4px 4px 8px #a3b1c6,
+                -4px -4px 8px #ffffff;
         }
 
         .apply-btn:hover {
-            background-color: #004494;
+            background: #ff9500;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #002f6c;
-            color: white;
+            background: #e0e5ec;
+            color: #333;
             margin-top: 40px;
+            border-radius: 12px;
+            margin: 10px;
+
+            /* Neumorphism */
+            box-shadow:
+                inset 5px 5px 10px #a3b1c6,
+                inset -5px -5px 10px #ffffff;
         }
     </style>
 </head>
@@ -138,7 +164,7 @@
 
         <div class="loan-card">
             <h3>₹1000 Loan</h3>
-            <p>Quick and secure short-term loan with "Swift loans, simple process, secured future.".</p>
+            <p>Quick and secure short-term loan with "Swift loans, simple process, secured future."</p>
             <a href="form.html" class="apply-btn">Apply Now</a>
         </div>
 
